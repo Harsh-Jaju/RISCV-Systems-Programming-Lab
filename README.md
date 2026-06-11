@@ -308,6 +308,6 @@ Implemented virtual memory optimizations using superpages.
 
 ## Author
 
-**Harsh Jaju**  
+**Harshvardhan Jaju**  
 B.Tech, Computer Science and Engineering  
 **Indian Institute of Technology Madras**
