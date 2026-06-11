@@ -1,267 +1,313 @@
 # RISCV Systems Programming Lab
 
-This repository contains my solutions and implementations for the **RISC-V Systems Programming Lab** at **Indian Institute of Technology Madras**. The labs cover fundamental and advanced concepts of RISC-V assembly programming, privilege modes, virtual memory, trap handling, and digital system design using Logisim.
+This repository contains my solutions and implementations for the **RISC-V Systems Programming Lab** at **IIT Madras**. The course explores various aspects of systems programming through the RISC-V architecture, including assembly programming, privilege modes, interrupt handling, virtual memory, page-fault management, and digital system design using Logisim.
+
+## Key Highlights
+
+- Implemented privilege transitions between Machine Mode (M-Mode) and Supervisor Mode (S-Mode).
+- Developed custom trap and exception handlers using RISC-V CSRs.
+- Configured timer interrupts and implemented cooperative multitasking through context switching.
+- Built a bare-metal Sv39 virtual memory subsystem.
+- Implemented multi-level page tables, virtual-to-physical address translation, and page-fault handling.
+- Designed and verified digital systems using Logisim.
+- Developed RISC-V assembly programs involving recursion, sorting, matrix multiplication, and memory management.
+
+---
+
+## Labs Overview
+
+| Lab | Topic |
+|------|--------|
+| 0 | Introduction |
+| 1 | Basic Assembly Programming |
+| 2 | Arrays and Matrix Operations |
+| 3 | Recursion in Assembly |
+| 4 | Digital Logic Design using Logisim |
+| 5 | Program Loading and Execution |
+| 6 | Privilege Modes and Trap Handling |
+| 7 | Timer Interrupts and Cooperative Multitasking |
+| 8 | Sv39 Virtual Memory |
+| 9 | Page Fault Handling |
+| 10 | Logisim-Based System Design |
+| 11 | Advanced Logisim Design |
+| 12 | Final Laboratory Assignment |
+| Endsem | Stack Analysis and Superpage Implementation |
 
 ---
 
 ## Lab 0 – Introduction
 
-Introduction to the RISC-V toolchain, simulator setup, and laboratory workflow.
+Introduction to the RISC-V ISA, toolchain, simulator environment, and laboratory workflow.
 
-Topics Covered:
-
-* RISC-V ISA basics
-* Assembly programming environment
-* Toolchain setup
+**Topics Covered**
+- RISC-V instruction set basics
+- Assembly programming workflow
+- Toolchain setup and execution environment
 
 ---
 
 ## Lab 1 – Basic Assembly Programming
 
-Implementation of elementary RISC-V assembly programs.
+Implemented elementary RISC-V assembly programs involving arithmetic, logical operations, and array manipulation.
 
-Tasks:
+**Tasks**
+- Arithmetic operations
+- Bitwise operations
+- Conditional execution
+- Array processing
 
-* Arithmetic operations
-* Bitwise operations
-* Array processing
-* Conditional execution
-
-Files:
-
-* `q1.s`
-* `q2.s`
+**Files**
+- `q1.s`
+- `q2.s`
 
 ---
 
 ## Lab 2 – Arrays and Matrix Operations
 
-Implementation of algorithms using loops and memory addressing.
+Implemented algorithms involving loops, memory addressing, and multi-dimensional data structures.
 
-Tasks:
+**Tasks**
+- Bubble Sort
+- Matrix Multiplication
+- Array Traversal
 
-* Bubble Sort
-* Matrix Multiplication
-* Multi-dimensional array traversal
-
-Files:
-
-* `q1.s`
-* `q2.s`
-* `q2b.s`
+**Files**
+- `q1.s`
+- `q2.s`
+- `q2b.s`
 
 ---
 
 ## Lab 3 – Recursion in Assembly
 
-Understanding procedure calls, stack usage, and recursion.
+Implemented recursive algorithms while understanding stack frames and procedure calls in RISC-V.
 
-Tasks:
+**Tasks**
+- Recursive Digit Sum
+- Recursive Function Implementation
 
-* Recursive digit sum
-* Recursive function implementation
-
-Files:
-
-* `q1.s`
-* `q1bonus.s`
+**Files**
+- `q1.s`
+- `q1bonus.s`
 
 ---
 
 ## Lab 4 – Digital Logic Design using Logisim
 
-Design and simulation of combinational and sequential circuits using Logisim.
+Designed and simulated digital circuits using Logisim.
 
-Tasks:
+**Topics Covered**
+- Combinational Logic
+- Sequential Logic
+- Circuit Verification
+- Simulation and Testing
 
-* Logic circuit implementation
-* Circuit verification
-* Simulation and testing
-
-Files:
-
-* `Task1.circ`
-* `Task2.circ`
-* `Task3.circ`
-* `Task4.circ`
+**Files**
+- `Task1.circ`
+- `Task2.circ`
+- `Task3.circ`
+- `Task4.circ`
 
 ---
 
-## Lab 5 – Program Loading and System Execution
+## Lab 5 – Program Loading and Execution
 
-Introduction to executing programs on the custom RISC-V platform.
+Worked with programs executing on a custom RISC-V platform.
 
-Tasks:
+**Tasks**
+- Hello World Implementation
+- Snake Game Implementation
+- Memory Initialization File Generation
+- Program Loading and Execution
 
-* Hello World implementation
-* Snake Game implementation
-* Memory initialization generation
-
-Contents:
-
-* Assembly programs
-* HEX memory images
-* Supporting files
+**Contents**
+- Assembly source files
+- HEX memory images
+- Supporting build files
 
 ---
 
 ## Lab 6 – Privilege Modes and Trap Handling
 
-Implementation of machine and supervisor mode execution.
+Implemented privilege mode transitions and trap handling mechanisms in RISC-V.
 
-Topics Covered:
+**Topics Covered**
+- Machine Mode (M-Mode)
+- Supervisor Mode (S-Mode)
+- CSR Programming
+- Trap and Exception Handling
+- Exception Delegation
+- Custom Trap Handlers
 
-* CSR operations
-* Exception delegation
-* Trap handlers
-* Machine Mode (M-Mode)
-* Supervisor Mode (S-Mode)
-
-Files:
-
-* `q1.s`
-
----
-
-## Lab 7 – Linking and Mixed-Language Programming
-
-Interfacing assembly with C and understanding program layout.
-
-Topics Covered:
-
-* Function calling conventions
-* Linker scripts
-* Memory organization
-* Assembly-C interaction
-
-Contents:
-
-* C source files
-* Assembly source files
-* Linker scripts
+**Learning Outcomes**
+- Understanding RISC-V privilege architecture
+- Handling exceptions and interrupts
+- Managing execution across privilege levels
 
 ---
 
-## Lab 8 – Supervisor Mode and Paging
+## Lab 7 – Timer Interrupts and Cooperative Multitasking
 
-Introduction to virtual memory support in RISC-V.
+Implemented timer-driven execution and context switching mechanisms.
 
-Topics Covered:
+**Topics Covered**
+- Timer Interrupt Configuration
+- Machine Timer Registers
+- Context Saving and Restoration
+- Cooperative Multitasking
+- Task Scheduling
 
-* Mode transitions
-* Page table creation
-* Address translation
-
-Files:
-
-* `template.s`
+**Learning Outcomes**
+- Interrupt-driven execution
+- Context switching between multiple tasks
+- Building a basic multitasking environment
 
 ---
 
-## Lab 9 – Virtual Memory and Page Fault Handling
+## Lab 8 – Sv39 Virtual Memory
 
-Implementation of demand paging concepts and exception handling.
+Implemented a bare-metal virtual memory subsystem using the Sv39 paging scheme.
 
-Topics Covered:
+**Topics Covered**
+- Sv39 Address Translation
+- Multi-Level Page Tables
+- SATP Configuration
+- Supervisor Mode Execution
+- Virtual-to-Physical Address Mapping
 
-* SATP configuration
-* Multi-level page tables
-* Page fault handling
-* Dynamic memory mapping
+**Learning Outcomes**
+- Understanding virtual memory systems
+- Constructing page tables
+- Managing address translation in RISC-V
 
-Files:
+---
 
-* `template_lab9.s`
+## Lab 9 – Page Fault Handling
+
+Implemented dynamic page mapping and software-managed page-fault resolution.
+
+**Topics Covered**
+- Instruction Page Faults
+- Load/Store Page Faults
+- Dynamic Page Allocation
+- Page Table Updates
+- Trap-Based Memory Management
+
+**Learning Outcomes**
+- Resolving page faults through software
+- Dynamic memory mapping
+- Integration of paging and trap handling mechanisms
 
 ---
 
 ## Lab 10 – Logisim-Based System Design
 
-Design and simulation of digital systems using Logisim.
+Designed and simulated digital systems using Logisim.
 
-Topics Covered:
+**Topics Covered**
+- Digital Circuit Design
+- Hardware Simulation
+- Functional Verification
+- System Integration
 
-* Digital circuit design
-* System integration
-* Hardware simulation
-* Functional verification
-
-Contents:
-
-* Logisim circuit files
-* Design resources
-* Supporting documentation
+**Tools**
+- Logisim
 
 ---
 
 ## Lab 11 – Advanced Logisim Design
 
-Implementation and testing of larger digital systems using Logisim.
+Implemented and verified larger digital systems using Logisim.
 
-Topics Covered:
+**Topics Covered**
+- Circuit Integration
+- Hardware Validation
+- System-Level Verification
+- Simulation-Based Testing
 
-* Circuit integration
-* Hardware validation
-* System-level verification
-* Simulation-based testing
-
-Contents:
-
-* `Lab11.circ`
-* Additional circuit files
-* Screenshots and documentation
+**Files**
+- `Lab11.circ`
 
 ---
 
 ## Lab 12 – Final Laboratory Assignment
 
-Final lab covering the concepts learned throughout the course.
+Final laboratory assignment integrating concepts learned throughout the course.
 
-Topics Covered:
-
-* Systems programming concepts
-* RISC-V architecture
-* Hardware-software interaction
-
----
-
-## End Semester
-
-Repository section containing resources and submissions related to the end-semester laboratory evaluation.
+**Topics Covered**
+- Systems Programming Concepts
+- RISC-V Architecture
+- Hardware-Software Interaction
 
 ---
 
-## Topics Covered
+## End Semester Evaluation
 
-* RISC-V Assembly Programming
-* Recursion and Stack Management
-* Sorting Algorithms
-* Matrix Multiplication
-* Privilege Modes
-* CSR Programming
-* Trap and Exception Handling
-* Virtual Memory
-* Paging and Address Translation
-* Linking and Memory Layout
-* C and Assembly Interfacing
-* Digital Logic Design
-* Logisim Circuit Design
-* Hardware Verification
+### Question 1 – Stack Analysis
+
+Implemented stack-related analysis and management mechanisms in RISC-V.
+
+**Topics Covered**
+- Stack Frame Construction
+- Function Call Management
+- Register Preservation
+- Stack Traversal and Analysis
+- Procedure Execution Tracking
+
+### Question 2 – Superpage Implementation
+
+Implemented virtual memory optimizations using superpages.
+
+**Topics Covered**
+- Multi-Level Page Tables
+- Superpage Mapping
+- Large-Page Address Translation
+- Reduced Page Table Overhead
+- Efficient Virtual Memory Management
+
+**Learning Outcomes**
+- Understanding hierarchical page-table structures
+- Implementing large-page mappings
+- Optimizing address translation performance
+
+---
+
+## Topics Covered Throughout the Course
+
+- RISC-V Assembly Programming
+- Stack Management and Recursion
+- Sorting Algorithms
+- Matrix Multiplication
+- Privilege Modes
+- CSR Programming
+- Trap and Exception Handling
+- Timer Interrupts
+- Cooperative Multitasking
+- Context Switching
+- Virtual Memory
+- Sv39 Paging
+- Page Tables
+- Page Fault Handling
+- Linking and Memory Layout
+- C and Assembly Interfacing
+- Digital Logic Design
+- Logisim Circuit Design
+- Hardware Verification
 
 ---
 
 ## Tools Used
 
-* RISC-V Toolchain
-* Spike Simulator
-* Logisim
-* GCC
-* Linker Scripts
+- RISC-V Toolchain
+- Spike Simulator
+- GCC
+- Linker Scripts
+- Logisim
 
 ---
 
 ## Author
 
-**Harsh Jaju**
-B.Tech, Computer Science and Engineering
-Indian Institute of Technology Madras
+**Harsh Jaju**  
+B.Tech, Computer Science and Engineering  
+**Indian Institute of Technology Madras**
